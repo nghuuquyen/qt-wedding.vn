@@ -1,10 +1,33 @@
 <template>
-    <div class="fixed bottom-0 w-full bg-white shadow-lg flex justify-around items-center p-4">
-        <button @click="scrollToSection('our-story')" class="text-gray-700 font-bold">Our Story</button>
-        <button @click="toggleQRModal" class="bg-pink-500 text-white p-4 rounded-full -mt-6 shadow-lg">
-            QR
-        </button>
-        <button @click="scrollToSection('gallery')" class="text-gray-700 font-bold">Gallery</button>
+    <!-- Fixed Pill Bottom Bar -->
+    <div
+        class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full px-6 py-3 flex items-center space-x-4"
+    >
+        <!-- Equal-Sized Buttons with Larger Width -->
+        <div class="flex-1 flex justify-center">
+            <button
+                @click="scrollToSection('our-story')"
+                class="text-gray-700 font-bold w-32 text-center py-2"
+            >
+                Our Story
+            </button>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <button
+                @click="toggleQRModal"
+                class="bg-pink-500 text-white w-20 h-20 rounded-full shadow-lg flex items-center justify-center"
+            >
+                QR
+            </button>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <button
+                @click="scrollToSection('gallery')"
+                class="text-gray-700 font-bold w-32 text-center py-2"
+            >
+                Gallery
+            </button>
+        </div>
     </div>
 
     <!-- QR Modal -->
@@ -51,3 +74,4 @@ export default {
     },
 };
 </script>
+
