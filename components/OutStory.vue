@@ -48,27 +48,27 @@
 export default {
     data() {
         return {
-            backgroundImage: new URL("~/assets/images/our-story-bg.jpg", import.meta.url).href, // Background for the section
+            backgroundImage: new URL("~/assets/images/our-story-bg.webp", import.meta.url).href, // Background for the section
             quotes: [
                 {
                     text: "This is where it all began, a story of love and hope.",
-                    image: new URL("~/assets/images/story1.jpg", import.meta.url).href,
+                    image: new URL("~/assets/images/story1.webp", import.meta.url).href,
                 },
                 {
                     text: "Every step we took brought us closer to this day.",
-                    image: new URL("~/assets/images/story2.jpg", import.meta.url).href,
+                    image: new URL("~/assets/images/story2.webp", import.meta.url).href,
                 },
                 {
                     text: "Together, we create memories that will last a lifetime.",
-                    image: new URL("~/assets/images/story3.jpg", import.meta.url).href,
+                    image: new URL("~/assets/images/story3.webp", import.meta.url).href,
                 },
                 {
                     text: "Love is not about finding someone to live with, it's about finding someone you can't live without.",
-                    image: new URL("~/assets/images/story4.jpg", import.meta.url).href,
+                    image: new URL("~/assets/images/story4.webp", import.meta.url).href,
                 },
                 {
                     text: "The best thing to hold onto in life is each other, and today we celebrate that bond.",
-                    image: new URL("~/assets/images/story5.jpg", import.meta.url).href,
+                    image: new URL("~/assets/images/story5.webp", import.meta.url).href,
                 },
             ],
             currentQuoteIndex: 0, // Index of the current quote
