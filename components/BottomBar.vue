@@ -1,13 +1,13 @@
 <template>
     <!-- Fixed Pill Bottom Bar -->
     <div
-        class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full px-6 py-3 flex items-center space-x-4"
+        class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-25 backdrop-blur-md shadow-lg rounded-full px-6 py-1 flex items-center space-x-4"
     >
         <!-- Equal-Sized Buttons with Larger Width -->
         <div class="flex-1 flex justify-center">
             <button
                 @click="scrollToSection('our-story')"
-                class="text-gray-700 font-bold w-32 text-center py-2"
+                class="text-white font-bold w-32 text-center py-2"
             >
                 Our Story
             </button>
@@ -15,7 +15,7 @@
         <div class="flex-1 flex justify-center">
             <button
                 @click="toggleQRModal"
-                class="bg-green-700 text-white w-20 h-20 rounded-full shadow-lg flex items-center justify-center"
+                class="bg-green-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center font-bold"
             >
                 QR
             </button>
@@ -23,7 +23,7 @@
         <div class="flex-1 flex justify-center">
             <button
                 @click="scrollToSection('gallery')"
-                class="text-gray-700 font-bold w-32 text-center py-2"
+                class="text-white font-bold w-32 text-center py-2"
             >
                 Gallery
             </button>
@@ -69,9 +69,8 @@ export default {
             this.showQR = !this.showQR;
         },
         scrollToSection(section) {
-            document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+            document.getElementById(section).scrollIntoView({ behavior: "smooth" });
         },
     },
 };
 </script>
-
