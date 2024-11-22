@@ -15,7 +15,7 @@
         <div class="flex-1 flex justify-center">
             <button
                 @click="toggleQRModal"
-                class="bg-pink-500 text-white w-20 h-20 rounded-full shadow-lg flex items-center justify-center"
+                class="bg-green-700 text-white w-20 h-20 rounded-full shadow-lg flex items-center justify-center"
             >
                 QR
             </button>

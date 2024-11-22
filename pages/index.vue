@@ -12,14 +12,7 @@
             </div>
         </div>
 
-        <div class="section" id="our-story">
-            <div class="flex justify-center items-center h-full bg-gray-200">
-                <div>
-                    <h2 class="text-3xl font-bold">Our Story</h2>
-                    <p class="mt-4">Our journey began...</p>
-                </div>
-            </div>
-        </div>
+        <OutStory id="our-story" />
 
         <div class="section" id="gallery">
             <div class="h-full bg-white flex flex-col justify-center items-center">
@@ -43,6 +36,7 @@ import fullpage from 'fullpage.js';
 export default {
     mounted() {
         new fullpage('#fullpage', {
+            licenseKey: 'FREE',
             autoScrolling: true,
             navigation: true,
             scrollingSpeed: 700,
