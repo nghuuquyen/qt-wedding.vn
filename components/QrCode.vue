@@ -22,9 +22,9 @@
 export default {
     data() {
         return {
-            backgroundImage: new URL("~/assets/images/qr-bg.jpg", import.meta.url).href,
-            chibiImage: new URL("~/assets/images/chibi.png", import.meta.url).href,
-            qrImage: new URL("~/assets/images/qr-codes.png", import.meta.url).href,
+            backgroundImage: "/images/qr-bg.jpg",
+            chibiImage: "/images/chibi.png",
+            qrImage: "/images/qr-codes.png",
         };
     },
 };

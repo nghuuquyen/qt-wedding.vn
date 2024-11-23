@@ -31,8 +31,8 @@
 export default {
     data() {
         return {
-            backgroundImage: new URL("~/assets/images/thank-bg.jpg", import.meta.url).href,
-            chibiImage: new URL("~/assets/images/chibi.png", import.meta.url).href,
+            backgroundImage: "/images/thank-bg.jpg",
+            chibiImage: "/images/chibi.png",
         };
     },
 };

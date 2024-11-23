@@ -27,71 +27,71 @@
 export default {
     data() {
         return {
-            backgroundImage: new URL("~/assets/images/our-story-bg.webp", import.meta.url).href,
+            backgroundImage: "/images/our-story-bg.webp",
             images: [
                 {
                     name: "0.png",
-                    url: new URL("~/assets/images/album/desktop/0.png", import.meta.url).href,
+                    url: "/images/album/desktop/0.png",
                 },
                 {
                     name: "1.png",
-                    url: new URL("~/assets/images/album/desktop/1.png", import.meta.url).href,
+                    url: "/images/album/desktop/1.png",
                 },
                 {
                     name: "2.png",
-                    url: new URL("~/assets/images/album/desktop/2.png", import.meta.url).href,
+                    url: "/images/album/desktop/2.png",
                 },
                 {
                     name: "3.png",
-                    url: new URL("~/assets/images/album/desktop/3.png", import.meta.url).href,
+                    url: "/images/album/desktop/3.png",
                 },
                 {
                     name: "4.png",
-                    url: new URL("~/assets/images/album/desktop/4.png", import.meta.url).href,
+                    url: "/images/album/desktop/4.png",
                 },
                 {
                     name: "5.png",
-                    url: new URL("~/assets/images/album/desktop/5.png", import.meta.url).href,
+                    url: "/images/album/desktop/5.png",
                 },
                 {
                     name: "6.png",
-                    url: new URL("~/assets/images/album/desktop/6.png", import.meta.url).href,
+                    url: "/images/album/desktop/6.png",
                 },
                 {
                     name: "7.png",
-                    url: new URL("~/assets/images/album/desktop/7.png", import.meta.url).href,
+                    url: "/images/album/desktop/7.png",
                 },
                 {
                     name: "8.png",
-                    url: new URL("~/assets/images/album/desktop/8.png", import.meta.url).href,
+                    url: "/images/album/desktop/8.png",
                 },
                 {
                     name: "9.png",
-                    url: new URL("~/assets/images/album/desktop/9.png", import.meta.url).href,
+                    url: "/images/album/desktop/9.png",
                 },
                 {
                     name: "10.png",
-                    url: new URL("~/assets/images/album/desktop/10.png", import.meta.url).href,
+                    url: "/images/album/desktop/10.png",
                 },
                 {
                     name: "11.png",
-                    url: new URL("~/assets/images/album/desktop/11.png", import.meta.url).href,
+                    url: "/images/album/desktop/11.png",
                 },
                 {
                     name: "12.png",
-                    url: new URL("~/assets/images/album/desktop/12.png", import.meta.url).href,
+                    url: "/images/album/desktop/12.png",
                 },
                 {
                     name: "13.png",
-                    url: new URL("~/assets/images/album/desktop/13.png", import.meta.url).href,
+                    url: "/images/album/desktop/13.png",
                 },
                 {
                     name: "14.png",
-                    url: new URL("~/assets/images/album/desktop/14.png", import.meta.url).href,
+                    url: "/images/album/desktop/14.png",
                 },
                 {
                     name: "15.png",
-                    url: new URL("~/assets/images/album/desktop/15.png", import.meta.url).href,
+                    url: "/images/album/desktop/15.png",
                 },
             ],
         };

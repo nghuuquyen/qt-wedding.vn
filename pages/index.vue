@@ -3,10 +3,10 @@
         <!-- Section: Banner -->
         <section id="banner" class="section bg-gradient-to-br from-purple-600 to-indigo-500 text-white relative">
             <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover" style="object-fit: none;">
-                <source src="~/assets/videos/banner-video.mp4" type="video/mp4" />
+                <source src="/videos/banner-video.mp4" type="video/mp4" />
             </video>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                <img src="~/assets/images/logo.png" alt="Logo" class="mb-4 max-w-[200px] lg:max-w-[350px]" />
+                <img src="/images/logo.png" alt="Logo" class="mb-4 max-w-[200px] lg:max-w-[350px]" />
                 <h1 class="text-white text-4xl font-bold" style="font-family: cursive;">
                     Welcome to Our Wedding
                 </h1>

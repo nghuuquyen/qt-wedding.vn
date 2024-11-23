@@ -39,11 +39,11 @@
             <h2 class="text-lg font-bold mb-4 text-center">Bank QR Codes</h2>
             <div class="flex justify-between">
                 <div class="text-center">
-                    <img src="~/assets/images/groom-qr.png" alt="Groom QR" class="w-24 h-24 mx-auto mb-2" />
+                    <img src="/images/groom-qr.png" alt="Groom QR" class="w-24 h-24 mx-auto mb-2" />
                     <p>Groom's Bank</p>
                 </div>
                 <div class="text-center">
-                    <img src="~/assets/images/bride-qr.png" alt="Bride QR" class="w-24 h-24 mx-auto mb-2" />
+                    <img src="/images/bride-qr.png" alt="Bride QR" class="w-24 h-24 mx-auto mb-2" />
                     <p>Bride's Bank</p>
                 </div>
             </div>
