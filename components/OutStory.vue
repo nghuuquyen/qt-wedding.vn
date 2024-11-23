@@ -22,7 +22,7 @@ export default {
                 },
                 {
                     text: "Love is not about finding someone to live with, it's about finding someone you can't live without.",
-                    image: "im/ages/HNG00416_1.jpg",
+                    image: "/images/HNG00416_1.jpg",
                 },
                 {
                     text: "I saw that you were perfect, and so I loved you. \n" +
