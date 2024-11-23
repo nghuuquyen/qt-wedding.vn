@@ -13,10 +13,7 @@
             </div>
         </section>
 
-        <!-- Section: Our Story -->
-        <section id="our-story" class="section bg-gray-100 flex justify-center items-center">
-            <OutStory />
-        </section>
+        <OutStory id="our-story" />
 
         <!-- Section: Gallery -->
         <section id="gallery" class="section bg-gradient-to-br from-green-600 to-blue-500 text-white flex justify-center items-center">
