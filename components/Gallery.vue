@@ -15,6 +15,7 @@
                         :src="item.url"
                         :alt="item.name"
                         class="h-[500px] w-auto rounded-lg shadow-md"
+                        loading="lazy"
                     />
                 </div>
             </div>
