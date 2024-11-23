@@ -17,10 +17,7 @@
 
         <Gallery id="gallery" />
 
-        <!-- Section: Thank You -->
-        <section id="thank-you" class="section bg-gradient-to-br from-pink-600 to-red-500 text-white flex justify-center items-center">
-            <h2 class="text-3xl font-bold">Thank You</h2>
-        </section>
+        <ThankYou id="thank-you" />
     </div>
 </template>
 
