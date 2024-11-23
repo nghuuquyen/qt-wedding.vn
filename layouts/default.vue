@@ -4,7 +4,7 @@
         <NuxtPage />
 
         <!-- Sticky Bottom Bar -->
-        <BottomBar />
+        <BottomBar v-if="false" />
     </div>
 </template>
 

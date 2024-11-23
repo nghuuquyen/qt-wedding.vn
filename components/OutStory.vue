@@ -15,7 +15,6 @@
 export default {
     data() {
         return {
-            backgroundImage: new URL("~/assets/images/our-story-bg.webp", import.meta.url).href,
             quotes: [
                 {
                     text: "Every step we took brought us closer to this day.",

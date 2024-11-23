@@ -15,10 +15,7 @@
 
         <OutStory id="our-story" />
 
-        <!-- Section: Gallery -->
-        <section id="gallery" class="section bg-gradient-to-br from-green-600 to-blue-500 text-white flex justify-center items-center">
-            <h2 class="text-3xl font-bold">Gallery</h2>
-        </section>
+        <Gallery id="gallery" />
 
         <!-- Section: Thank You -->
         <section id="thank-you" class="section bg-gradient-to-br from-pink-600 to-red-500 text-white flex justify-center items-center">
