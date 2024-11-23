@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     devtools: {enabled: false},
     css: ['@/assets/css/main.css'],
     ssr: false,
+    app: {
+        buildAssetsDir: '/_nuxt/',
+    },
     postcss: {
         plugins: {
             tailwindcss: {},
