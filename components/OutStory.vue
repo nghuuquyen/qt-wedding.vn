@@ -5,15 +5,21 @@
     >
         <!-- Mobile View -->
         <div class="md:hidden relative w-full h-full flex items-center justify-center overflow-hidden">
-            <img
-                :src="quotes[currentQuoteIndex].image"
-                alt="Story Image"
-                class="absolute inset-0 w-full h-full object-cover z-0"
-            />
-            <div class="absolute z-10 bg-black bg-opacity-50 text-white px-6 py-4 rounded-lg max-w-[80%] text-center">
-                <p class="text-xl font-serif italic leading-relaxed">
-                    "{{ quotes[currentQuoteIndex].text }}"
-                </p>
+            <div v-for="(quote, index) in quotes" :key="index" class="inset-0 w-full h-full">
+                <img
+                    v-show="currentQuoteIndex === index"
+                    :src="quote.image"
+                    alt="Story Image"
+                    class="absolute inset-0 w-full h-full object-cover z-0"
+                />
+                <div
+                    v-show="currentQuoteIndex === index"
+                    class="absolute z-10 bg-black bg-opacity-50 text-white px-6 py-4 rounded-lg max-w-[80%] text-center left-[10%] top-[50%]"
+                >
+                    <p class="text-xl font-serif italic leading-relaxed">
+                        "{{ quote.text }}"
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -21,22 +27,30 @@
         <div class="hidden md:grid grid-cols-2 gap-8 items-center w-full h-full px-16">
             <!-- Image Box -->
             <div class="relative flex justify-center items-center overflow-hidden">
-                <img
-                    :src="quotes[currentQuoteIndex].image"
-                    alt="Story Image"
-                    class="object-contain w-full max-h-[650px] h-auto rounded-lg shadow-lg"
-                />
+                <div v-for="(quote, index) in quotes" :key="index">
+                    <img
+                        v-show="currentQuoteIndex === index"
+                        :src="quote.image"
+                        alt="Story Image"
+                        class="object-contain w-full max-h-[650px] h-auto rounded-lg shadow-lg"
+                    />
+                </div>
             </div>
             <!-- Quote Box -->
-            <div class="relative flex flex-col items-center justify-center bg-gradient-to-br from-fuchsia-500 to-rose-500 text-white px-10 py-8 rounded-lg w-[500px] shadow-xl">
+            <div
+                v-for="(quote, index) in quotes"
+                :key="index"
+                class="relative flex flex-col items-center justify-center bg-gradient-to-br from-fuchsia-500 to-rose-500 text-white px-10 py-8 rounded-lg w-[500px] shadow-xl"
+                v-show="currentQuoteIndex === index"
+            >
                 <div class="text-center">
                     <p class="text-2xl font-serif italic leading-relaxed">
-                        "{{ quotes[currentQuoteIndex].text }}"
+                        "{{ quote.text }}"
                     </p>
                     <div class="mt-4">
-                        <span class="block text-sm uppercase tracking-widest font-semibold opacity-90">
-                            - A Moment to Remember
-                        </span>
+            <span class="block text-sm uppercase tracking-widest font-semibold opacity-90">
+              - A Moment to Remember
+            </span>
                     </div>
                 </div>
             </div>
@@ -48,7 +62,7 @@
 export default {
     data() {
         return {
-            backgroundImage: new URL("~/assets/images/our-story-bg.webp", import.meta.url).href, // Background for the section
+            backgroundImage: new URL("~/assets/images/our-story-bg.webp", import.meta.url).href,
             quotes: [
                 {
                     text: "This is where it all began, a story of love and hope.",
@@ -92,7 +106,15 @@ export default {
 </script>
 
 <style scoped>
-/* Quote Styles */
+/* General Styles */
+.section {
+    position: relative;
+}
+
+img {
+    transition: opacity 0.5s ease;
+}
+
 p {
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Enhance readability */
 }
