@@ -1,0 +1,36 @@
+name: Deploy Nuxt 3 Static Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Replace 'main' with the branch you want to deploy from
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Ensure this matches your project's Node.js version
+
+      # Step 3: Install dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Step 4: Build the Nuxt 3 Static Site
+      - name: Build Nuxt.js Static Site
+        run: npm run generate
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .output/public # Correct directory for Nuxt 3 static files
