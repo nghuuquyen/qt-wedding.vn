@@ -18,14 +18,10 @@
         <Gallery id="gallery" />
 
         <ThankYou id="thank-you" />
+
+        <QrCode id="qr-code" />
     </div>
 </template>
-
-<script>
-export default {
-    // Do nothing
-};
-</script>
 
 <style scoped>
 /* Page and Section Styles */

@@ -1,11 +1,11 @@
 <template>
     <section class="bg-center bg-cover h-screen relative" :style="{ backgroundImage: `url(${backgroundImage})` }">
-        <div class="md:hidden relative w-full h-full flex items-center justify-center overflow-hidden">
-            <div class="inset-0 absolute z-2 top-[20%] left-[10%] right-[10%] text-center flex flex-col items-center">
+        <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
+            <div class="inset-0 text-center flex flex-col items-center">
                 <img
                     :src="chibiImage"
                     alt="Thank You Background"
-                    class="object-cover w-[250px] mb-2"
+                    class="object-cover w-[250px] mb-3"
                 />
 
                 <div
