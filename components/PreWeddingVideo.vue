@@ -1,6 +1,6 @@
 <template>
     <div class="pre-wedding-video bg-center bg-cover h-screen relative w-full flex flex-col items-center justify-center">
-        <h1 class="w-full text-4xl font-bold text-center mt-5 mb-10" style="font-family: cursive; color: #8f7066;">
+        <h1 class="w-full text-3xl font-bold text-center mt-5 mb-10" style="font-family: cursive; color: #8f7066;">
             Our Wedding Video
         </h1>
 
@@ -15,6 +15,7 @@
             />
             <!-- Play Button -->
             <button
+                aria-label="Play Video"
                 class="rounded-full flex justify-center w-full text-center items-center absolute left-0 right-0 top-[40%]"
                 @click="openModal"
             >
@@ -36,6 +37,7 @@
                     class="w-full h-full"
                 ></iframe>
                 <button
+                    aria-label="Close Video Modal"
                     @click="closeModal"
                     class="absolute top-[-50px] right-[-10px] text-white bg-black bg-opacity-75 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-100"
                 >

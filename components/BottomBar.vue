@@ -2,9 +2,10 @@
     <!-- Floating QR Button -->
     <div class="fixed bottom-[75px] right-[15px] flex flex-col items-center space-y-2 w-12 h-12">
         <button
+            aria-label="QR Code"
             @click="toggleQRModal"
             style="z-index: 1;"
-            class="z-1 bg-blue-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
+            class="z-1 bg-blue-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
         >
             <span class="text-lg font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -32,6 +33,7 @@
 
         <!-- Main Expand Button -->
         <button
+            aria-label="Expand Menu"
             @click="toggleMenu"
             class="fixed bottom-[20px] right-[15px] bg-orange-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center font-bold transition-transform duration-300 hover:scale-110"
         >
@@ -51,6 +53,7 @@
     <!-- Floating Music Button -->
     <div class="fixed bottom-[20px] left-4 flex flex-row items-center z-0">
         <button
+            aria-label="Toggle Music"
             @click="toggleMusic"
             style="z-index: 1;"
             class="z-1 bg-orange-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
@@ -81,6 +84,7 @@
                 <QrCode v-if="showQR" :off-animation="true" />
             </div>
             <button
+                aria-label="Close QR Modal"
                 @click="toggleQRModal"
                 class="mt-4 w-full bg-gray-700 text-white py-2 rounded-lg"
             >

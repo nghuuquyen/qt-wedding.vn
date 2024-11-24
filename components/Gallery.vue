@@ -1,6 +1,6 @@
 <template>
     <section class="bg-center bg-cover h-screen relative">
-        <h1 class="text-4xl font-bold text-center mt-10 w-full absolute" style="font-family: cursive; color: #8f7066;">
+        <h1 class="text-3xl font-bold text-center mt-10 w-full absolute" style="font-family: cursive; color: #8f7066;">
             Our Album
         </h1>
 
