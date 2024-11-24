@@ -19,6 +19,7 @@ export function useMusic() {
             musicState.audio.play();
         }
         musicState.isPlaying = !musicState.isPlaying; // Update state reactively
+        musicState.isTemporarilyPaused = false;
     };
 
     const temporarilyPauseMusic = () => {
