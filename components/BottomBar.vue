@@ -23,7 +23,7 @@
                 v-if="menuVisible"
                 v-for="(item, index) in menuItems"
                 :key="index"
-                class="bg-orange-500 text-sm text-white text-center font-bold py-2 px-4 rounded-lg shadow-lg cursor-pointer mb-2"
+                class="bg-orange-400 text-sm text-white text-center font-bold py-2 px-4 rounded-lg shadow-lg cursor-pointer mb-2"
                 @click="item.action"
             >
                 {{ item.label }}
@@ -33,7 +33,7 @@
         <!-- Main Expand Button -->
         <button
             @click="toggleMenu"
-            class="fixed bottom-[20px] right-[15px] bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold transition-transform duration-300 hover:scale-110"
+            class="fixed bottom-[20px] right-[15px] bg-orange-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center font-bold transition-transform duration-300 hover:scale-110"
         >
             <span v-if="menuVisible" class="text-2xl text-white" style="line-height: normal;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -61,8 +61,8 @@
             </span>
         </button>
         <span
-            class="text-sm text-white mt-0 bg-orange-500 px-4 py-1 -ml-4 rounded-2xl overflow-hidden relative"
-            style="width: 120px; height: 30px; line-height: inherit;"
+            class="text-sm text-white mt-0 bg-orange-400 px-6 py-1 -ml-4 rounded-2xl overflow-hidden relative"
+            style="width: 145px; height: 30px; line-height: inherit;"
         >
             <span class="absolute whitespace-nowrap" :class="{'animate-scroll': musicState?.isPlaying}" style="animation-duration: 20s;">
                 {{ musicState?.isPlaying ? "Now Playing: Một Đời Song by 14 Casper and Bon Nghiêm" : "Play Music" }}

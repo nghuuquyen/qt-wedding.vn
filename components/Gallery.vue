@@ -1,10 +1,10 @@
 <template>
     <section class="bg-center bg-cover h-screen relative">
-        <h1 class="text-3xl font-bold text-center absolute left-[15px] top-[100px] inline" style="font-family: cursive; color: #8f7066;">
+        <h1 class="text-4xl font-bold text-center mt-10 w-full absolute" style="font-family: cursive; color: #8f7066;">
             Our Album
         </h1>
 
-        <div class="overflow-x-auto p-4 h-full" ref="gallery">
+        <div class="custom-scrollbar overflow-x-auto px-4 h-full" ref="gallery">
             <div class="flex flex-row space-x-4 sm:space-x-8 h-full items-center relative">
                 <div
                     v-for="(item, index) in images"
@@ -113,3 +113,25 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+/* Target the specific div with the 'custom-scrollbar' class */
+.custom-scrollbar {
+    scrollbar-color: pink transparent; /* Color for the scrollbar (thumb and track) */
+    scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+}
+
+/* For webkit-based browsers (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: pink; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Round corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+}
+</style>

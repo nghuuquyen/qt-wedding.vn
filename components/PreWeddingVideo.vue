@@ -1,6 +1,6 @@
 <template>
-    <div class="pre-wedding-video bg-center bg-cover h-screen relative w-full flex items-center justify-center">
-        <h1 class="text-3xl font-bold text-center absolute top-[100px] inline" style="font-family: cursive; color: #8f7066;">
+    <div class="pre-wedding-video bg-center bg-cover h-screen relative w-full flex flex-col items-center justify-center">
+        <h1 class="w-full text-4xl font-bold text-center mt-5 mb-10" style="font-family: cursive; color: #8f7066;">
             Our Wedding Video
         </h1>
 
@@ -114,4 +114,3 @@ export default {
     },
 };
 </script>
-
