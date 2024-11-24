@@ -1,5 +1,16 @@
 <template>
-    <div class="relative bg-center bg-cover bg-fixed min-h-screen" :style="{ backgroundImage: `url(${backgroundImage})` }">
+    <div class="relative bg-center min-h-screen">
+        <!-- Background -->
+        <div
+            :style="{ backgroundImage: `url(${backgroundImage})` }"
+            class="absolute inset-0 -z-10 bg-cover bg-center"
+            style="
+              background-size: cover;
+              background-position: center;
+              position: fixed;
+            "
+        ></div>
+
         <!-- Heart Drop Background -->
         <div class="fixed inset-0 overflow-hidden pointer-events-none z-10">
             <div
