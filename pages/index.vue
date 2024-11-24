@@ -1,8 +1,8 @@
 <template>
     <div class="page">
         <!-- Section: Banner -->
-        <section id="banner" class="section bg-gradient-to-br from-purple-600 to-indigo-500 text-white relative">
-            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover" style="object-fit: none;">
+        <section id="banner" class="section text-white relative">
+            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
                 <source src="/videos/banner-video.mp4" type="video/mp4" />
             </video>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
