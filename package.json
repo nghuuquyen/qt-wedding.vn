@@ -12,6 +12,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "nuxt": "^3.14.1592",
+    "nuxt-gtag": "^3.0.2",
     "scrollreveal": "^4.0.9",
     "vue": "latest",
     "vue-router": "latest"
