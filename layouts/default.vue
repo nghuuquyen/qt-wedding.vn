@@ -16,7 +16,7 @@
         </div>
 
         <!-- Sticky Bottom Bar -->
-        <BottomBar v-if="false" />
+        <BottomBar />
     </div>
 </template>
 
