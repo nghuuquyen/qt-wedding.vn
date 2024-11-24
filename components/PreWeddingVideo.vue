@@ -48,6 +48,7 @@
 
 <script>
 import ScrollReveal from "scrollreveal";
+import { useMusic } from "~/composables/useMusic";
 
 export default {
     props: {
@@ -59,6 +60,14 @@ export default {
             type: String,
             required: true,
         },
+    },
+    setup() {
+        const { temporarilyPauseMusic, resumeMusic } = useMusic();
+
+        return {
+            temporarilyPauseMusic,
+            resumeMusic,
+        };
     },
     data() {
         return {
@@ -88,10 +97,12 @@ export default {
     },
     methods: {
         openModal() {
+            this.temporarilyPauseMusic();
             this.showModal = true;
         },
         closeModal() {
             this.showModal = false;
+            this.resumeMusic();
         },
     },
 };

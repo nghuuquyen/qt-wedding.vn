@@ -2,7 +2,7 @@
     <!-- Floating Expandable Button -->
     <div class="fixed bottom-[20px] right-[15px] flex flex-col items-center space-y-2">
         <!-- Menu Items (Hidden by Default) -->
-        <transition-group name="menu" tag="div" class="absolute  right-0 bottom-[60px] w-[120px]">
+        <transition-group name="menu" tag="div" class="absolute right-0 bottom-[60px] w-[120px]">
             <div
                 v-if="menuVisible"
                 v-for="(item, index) in menuItems"
@@ -36,14 +36,20 @@
     <div class="fixed bottom-[20px] left-4 flex flex-row items-center z-0">
         <button
             @click="toggleMusic"
-            class="bg-orange-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
+            style="z-index: 1;"
+            class="z-1 bg-orange-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
         >
-            <span class="text-lg font-bold">{{ isPlaying ? "❚❚" : "▶" }}</span>
+            <span class="text-lg font-bold">{{ musicState?.isPlaying ? "❚❚" : "▶" }}</span>
         </button>
-        <span class="text-sm text-white mt-0 bg-orange-500 px-4 py-1 -ml-4 rounded-2xl">{{ isPlaying ? "Stop music" : "Play music"
-            }}</span>
+        <span
+            class="text-sm text-white mt-0 bg-orange-500 px-4 py-1 -ml-4 rounded-2xl overflow-hidden relative"
+            style="width: 120px; height: 30px;"
+        >
+            <span class="absolute whitespace-nowrap" :class="{'animate-scroll': musicState?.isPlaying}" style="animation-duration: 20s;">
+                {{ musicState?.isPlaying ? "Now Playing: Một Đời Song by 14 Casper and Bon Nghiêm" : "Play Music" }}
+            </span>
+        </span>
     </div>
-
 
     <!-- QR Modal -->
     <div
@@ -66,7 +72,21 @@
 </template>
 
 <script>
+import { useMusic } from "~/composables/useMusic";
+import QrCode from "@/components/QrCode.vue";
+
 export default {
+    components: {
+        QrCode,
+    },
+    setup() {
+        const { musicState, toggleMusic } = useMusic();
+
+        return {
+            musicState,
+            toggleMusic,
+        };
+    },
     data() {
         return {
             menuVisible: false, // State to control menu visibility
@@ -85,14 +105,7 @@ export default {
                 },
             ],
             showQR: false,
-            isPlaying: false, // Track if music is playing
-            audio: null, // Audio object for background music
         };
-    },
-    mounted() {
-        // Initialize the audio object
-        this.audio = new Audio("/audios/mot-doi.mp3");
-        this.audio.loop = true; // Set music to loop
     },
     methods: {
         toggleQRModal() {
@@ -104,25 +117,26 @@ export default {
         toggleMenu() {
             this.menuVisible = !this.menuVisible;
         },
-        toggleMusic() {
-            if (this.isPlaying) {
-                this.audio.pause();
-            } else {
-                this.audio.play();
-            }
-            this.isPlaying = !this.isPlaying;
-        },
-    },
-    beforeDestroy() {
-        // Cleanup the audio object when the component is destroyed
-        if (this.audio) {
-            this.audio.pause();
-            this.audio = null;
-        }
     },
 };
 </script>
 
 <style scoped>
-/* Add custom styles here if needed */
+/* Scrolling effect for music title */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll {
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: 0;
+}
 </style>
