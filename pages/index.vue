@@ -1,15 +1,14 @@
 <template>
     <div class="page">
         <!-- Section: Banner -->
-        <section id="banner" class="section text-white relative">
-            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-                <source src="/videos/banner-video.mp4" type="video/mp4" />
-            </video>
-            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center">
-                <img src="/images/logo.png" alt="Logo" class="mb-4 max-w-[200px] lg:max-w-[350px]" />
-                <h1 class="text-white text-4xl font-bold" style="font-family: cursive;">
-                    Welcome to Our Wedding
-                </h1>
+        <section id="banner" class="section text-white relative bg-cover bg-center lg:bg-top" :style="{ backgroundImage: `url(/images/banner.jpg)` }">
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center bottom-[-50%]">
+                <div ref="logo" class="flex flex-col items-center content-center">
+                    <img src="/images/logo.png" alt="Logo" class="mb-4 max-w-[200px] lg:max-w-[350px]" />
+                    <h1 class="text-white text-3xl sm:text-4xl font-bold" style="font-family: cursive;">
+                        Welcome to Our Wedding
+                    </h1>
+                </div>
             </div>
         </section>
 
@@ -23,6 +22,21 @@
     </div>
 </template>
 
+<script>
+import ScrollReveal from "scrollreveal";
+
+export default {
+    mounted() {
+        ScrollReveal().reveal(this.$refs.logo, {
+            delay: 500,
+            duration: 1000,
+            origin: "top",
+            distance: "50px",
+            opacity: 0,
+        });
+    },
+};
+</script>
 <style scoped>
 /* Page and Section Styles */
 .page {
