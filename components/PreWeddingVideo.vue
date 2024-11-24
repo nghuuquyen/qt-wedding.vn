@@ -37,7 +37,7 @@
                 ></iframe>
                 <button
                     @click="closeModal"
-                    class="absolute text-white bg-black bg-opacity-75 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-100"
+                    class="absolute top-[-50px] right-[-10px] text-white bg-black bg-opacity-75 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-100"
                 >
                     ✕
                 </button>
