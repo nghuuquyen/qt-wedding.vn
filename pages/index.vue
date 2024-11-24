@@ -2,7 +2,7 @@
     <div class="page">
         <!-- Section: Banner -->
         <section id="banner" class="section text-white relative bg-cover bg-center lg:bg-top" :style="{ backgroundImage: `url(/images/banner.jpg)` }">
-            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center bottom-[-50%]">
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center bottom-[-15%]">
                 <div ref="logo" class="flex flex-col items-center content-center">
                     <img src="/images/logo.png" alt="Logo" class="mb-4 max-w-[200px] lg:max-w-[350px]" />
                     <h1 class="text-white text-3xl sm:text-4xl font-bold" style="font-family: cursive;">
@@ -15,6 +15,8 @@
         <OutStory id="our-story" />
 
         <Gallery id="gallery" />
+
+        <PreWeddingVideo id="pre-wedding-video" thumbnail="/images/video-thumbnail.jpg" video-id="_4hbXkkfkrM"/>
 
         <ThankYou id="thank-you" />
 
