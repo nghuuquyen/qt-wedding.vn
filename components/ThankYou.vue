@@ -31,7 +31,7 @@
 export default {
     data() {
         return {
-            backgroundImage: "/images/thank-bg.jpg",
+            backgroundImage: "/images/bg/thank-bg.jpg",
             chibiImage: "/images/chibi.png",
         };
     },

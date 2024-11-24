@@ -22,7 +22,7 @@
 export default {
     data() {
         return {
-            backgroundImage: "/images/qr-bg.jpg",
+            backgroundImage: "/images/bg/qr-bg.jpg",
             chibiImage: "/images/chibi.png",
             qrImage: "/images/qr-codes.png",
         };

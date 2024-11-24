@@ -27,7 +27,7 @@
 export default {
     data() {
         return {
-            backgroundImage: "/images/our-story-bg.webp",
+            backgroundImage: "/images/bg/our-story-bg.jpg",
             images: [
                 {
                     name: "0.png",
