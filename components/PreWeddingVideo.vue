@@ -5,7 +5,7 @@
         </h1>
 
         <!-- Video Thumbnail with Play Button -->
-        <div class="relative" ref="videoThumbnail">
+        <div ref="videoThumbnail">
             <!-- Thumbnail Image -->
             <img
                 :src="thumbnail"
@@ -15,12 +15,10 @@
             />
             <!-- Play Button -->
             <button
-                class="absolute top-1/2 left-[43%] transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-4xl bg-[#F7643B] hover:bg-opacity-75 rounded-full animate-bounce"
-                style="top: 50%;"
-                :class="playButtonAnimation"
+                class="rounded-full animate-bounce flex justify-center w-full text-center items-center absolute left-0 right-0 top-[45%]"
                 @click="openModal"
             >
-                <img src="/images/play-button.png" alt="Play Button" class="w-10 h-10" />
+                <img src="/images/play-button.png" alt="Play Button" class="w-[95px] h-auto" />
             </button>
         </div>
 
@@ -64,13 +62,9 @@ export default {
     },
     data() {
         return {
-            playButtonAnimation: "animate__pulse",
-            backgroundImage: "/images/bg/our-story-bg.jpg",
+            backgroundImage: "/images/bg/qr-bg.jpg",
             showModal: false,
         };
-    },
-    created() {
-        this.startAnimationLoop();
     },
     mounted() {
         const sr = ScrollReveal({
@@ -99,26 +93,7 @@ export default {
         closeModal() {
             this.showModal = false;
         },
-        startAnimationLoop() {
-            setInterval(() => {
-                this.playButtonAnimation = "";
-                setTimeout(() => {
-                    this.playButtonAnimation = "animate__pulse";
-                }, 10);
-            }, 2000);
-        },
     },
 };
 </script>
 
-<style scoped>
-/* Pre-Wedding Video Styles */
-.pre-wedding-video button {
-    top: -50px;
-    right: -10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-</style>

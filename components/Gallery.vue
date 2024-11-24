@@ -4,7 +4,7 @@
             Our Album
         </h1>
 
-        <div class="overflow-x-auto p-4 h-full">
+        <div class="overflow-x-auto p-4 h-full" ref="gallery">
             <div class="flex flex-row space-x-4 sm:space-x-8 h-full items-center relative">
                 <div
                     v-for="(item, index) in images"
@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import ScrollReveal from "scrollreveal";
+
 export default {
     data() {
         return {
@@ -99,6 +101,15 @@ export default {
                 },
             ],
         };
+    },
+    mounted() {
+        ScrollReveal().reveal(this.$refs.gallery, {
+            delay: 500,
+            duration: 3000,
+            origin: "top",
+            distance: "50px",
+            opacity: 0,
+        });
     },
 };
 </script>
