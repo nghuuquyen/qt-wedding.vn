@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-center bg-cover h-screen relative" :style="{ backgroundImage: `url(${backgroundImage})` }">
+    <section class="bg-center bg-cover h-screen relative">
         <h1 class="text-3xl font-bold text-center absolute left-[15px] top-[100px] inline" style="font-family: cursive; color: #8f7066;">
             Our Album
         </h1>

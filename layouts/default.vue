@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-center bg-cover bg-fixed" :style="{ backgroundImage: `url(${backgroundImage})` }">
         <!-- Main Content -->
         <NuxtPage />
 
@@ -15,6 +15,11 @@ export default {
     components: {
         BottomBar,
     },
+    data() {
+        return {
+            backgroundImage: "/images/bg/thank-bg.jpg",
+        }
+    }
 };
 </script>
 

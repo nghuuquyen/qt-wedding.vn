@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-center bg-cover h-screen relative" :style="{ backgroundImage: `url(${backgroundImage})` }">
+    <section class="bg-center bg-cover h-screen relative">
         <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
             <div class="inset-0 text-center flex flex-col items-center">
                 <img
