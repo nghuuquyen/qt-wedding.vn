@@ -34,7 +34,7 @@ export default defineNuxtConfig({
                 }, // Open Graph description
                 {
                     property: 'og:image',
-                    content: 'https://qt-wedding.vn/images/banner.jpg', // Open Graph image (absolute URL)
+                    content: 'https://qt-wedding.vn/images/share-banner.png', // Open Graph image (absolute URL)
                 },
                 {
                     property: 'og:url',
@@ -49,7 +49,7 @@ export default defineNuxtConfig({
                 }, // Twitter description
                 {
                     name: 'twitter:image',
-                    content: 'https://qt-wedding.vn/images/banner.jpg', // Twitter image (absolute URL)
+                    content: 'https://qt-wedding.vn/images/share-banner.png', // Twitter image (absolute URL)
                 },
             ],
             link: [
