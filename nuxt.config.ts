@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
-    devtools: {enabled: false},
+    devtools: { enabled: false },
     css: [
         '@/assets/css/main.css',
         'animate.css',
@@ -11,52 +11,46 @@ export default defineNuxtConfig({
     app: {
         buildAssetsDir: '/_nuxt/',
         head: {
-            title: 'Huu Quyen & Thuy Trang Wedding', // Main title of the website
+            title: 'Huu Quyen & Thuy Trang Wedding',
             htmlAttrs: {
-                lang: 'en', // Set the language to English
+                lang: 'en',
             },
             meta: [
-                {charset: 'utf-8'},
-                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 {
                     name: 'description',
-                    content: 'Join us in celebrating the wedding of Huu Quyen and Thuy Trang. Discover our love story, wedding details, and beautiful memories.',
-                }, // SEO description
-                {name: 'author', content: 'Huu Quyen & Thuy Trang'}, // Author of the site
-                {name: 'keywords', content: 'wedding, Huu Quyen, Thuy Trang, love story, wedding celebration'}, // SEO keywords
-                {
-                    property: 'og:title',
-                    content: 'Huu Quyen & Thuy Trang Wedding',
-                }, // Open Graph title
+                    content: "Welcome to our wedding website! We're thrilled to share our love story and special moments with you. Thank you for being part of our journey!",
+                },
+                { name: 'author', content: 'Huu Quyen & Thuy Trang' },
+                { name: 'keywords', content: 'wedding, Huu Quyen, Thuy Trang, love story, wedding celebration' },
+                { property: 'og:title', content: 'Huu Quyen & Thuy Trang Wedding' },
                 {
                     property: 'og:description',
-                    content: 'Celebrate the love of Huu Quyen and Thuy Trang with us. Explore our love story, wedding details, and special moments.',
-                }, // Open Graph description
+                    content: "Welcome to our wedding website! We're thrilled to share our love story and special moments with you. Thank you for being part of our journey!",
+                },
                 {
                     property: 'og:image',
-                    content: 'https://qt-wedding.vn/images/share-banner.png', // Open Graph image (absolute URL)
+                    content: 'https://qt-wedding.vn/images/share-banner.png',
                 },
-                {
-                    property: 'og:url',
-                    content: 'https://qt-wedding.vn', // Custom domain
-                },
-                {property: 'og:type', content: 'website'}, // Type of Open Graph content
-                {name: 'twitter:card', content: 'summary_large_image'}, // Twitter card type
-                {name: 'twitter:title', content: 'Huu Quyen & Thuy Trang Wedding'}, // Twitter title
+                { property: 'og:url', content: 'https://qt-wedding.vn' },
+                { property: 'og:type', content: 'website' },
+                { name: 'twitter:card', content: 'summary_large_image' },
+                { name: 'twitter:title', content: 'Huu Quyen & Thuy Trang Wedding' },
                 {
                     name: 'twitter:description',
-                    content: 'Celebrate the wedding of Huu Quyen and Thuy Trang. Discover their love story, wedding plans, and cherished moments.',
-                }, // Twitter description
+                    content: "Welcome to our wedding website! We're thrilled to share our love story and special moments with you. Thank you for being part of our journey!",
+                },
                 {
                     name: 'twitter:image',
-                    content: 'https://qt-wedding.vn/images/share-banner.png', // Twitter image (absolute URL)
+                    content: 'https://qt-wedding.vn/images/share-banner.png',
                 },
             ],
             link: [
-                {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'}, // 32x32 Favicon
-                {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'}, // 16x16 Favicon
-                {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'}, // Apple Touch Icon
-                {rel: 'manifest', href: '/site.webmanifest'}, // Web Manifest
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+                { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+                { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+                { rel: 'manifest', href: '/site.webmanifest' },
             ],
         },
     },
@@ -66,8 +60,8 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
-    modules: ['nuxt-gtag'],
+    modules: ['@nuxtjs/gtag'],
     gtag: {
-        id: 'G-KVPV4DRSM9'
+        id: 'G-KVPV4DRSM9',
     },
 });
