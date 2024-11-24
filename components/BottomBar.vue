@@ -1,10 +1,10 @@
 <template>
     <!-- Floating QR Button -->
-    <div class="fixed bottom-[75px] right-[15px] flex flex-col items-center space-y-2">
+    <div class="fixed bottom-[75px] right-[15px] flex flex-col items-center space-y-2 w-12 h-12">
         <button
             @click="toggleQRModal"
             style="z-index: 1;"
-            class="z-1 bg-green-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
+            class="z-1 bg-blue-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
         >
             <span class="text-lg font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
