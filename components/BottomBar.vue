@@ -2,12 +2,12 @@
     <!-- Floating Expandable Button -->
     <div class="fixed bottom-[20px] right-[15px] flex flex-col items-center space-y-2">
         <!-- Menu Items (Hidden by Default) -->
-        <transition-group name="menu" tag="div" class="absolute right-0 bottom-[60px] w-[120px]">
+        <transition-group name="menu" tag="div" class="absolute right-0 bottom-[60px] w-[160px]">
             <div
                 v-if="menuVisible"
                 v-for="(item, index) in menuItems"
                 :key="index"
-                class="bg-orange-400 bg-opacity-75 text-white text-center font-bold py-2 px-4 rounded-lg shadow-lg cursor-pointer mb-2"
+                class="bg-orange-400 text-sm bg-opacity-75 text-white text-center font-bold py-2 px-4 rounded-lg shadow-lg cursor-pointer mb-2"
                 @click="item.action"
             >
                 {{ item.label }}
@@ -59,7 +59,7 @@
         <div class="bg-white rounded-t-lg p-6 w-full max-w-md bg-cover bg-center" style="background-image: url(/images/bg/qr-bg.jpg);">
             <h2 class="text-lg font-bold mb-4 text-center">Bank QR Codes</h2>
             <div class="flex justify-between">
-                <QrCode />
+                <QrCode v-if="showQR" :off-animation="true" />
             </div>
             <button
                 @click="toggleQRModal"
@@ -96,12 +96,16 @@ export default {
                     action: () => this.scrollToSection("our-story"),
                 },
                 {
-                    label: "QR Code",
-                    action: this.toggleQRModal,
-                },
-                {
                     label: "Gallery",
                     action: () => this.scrollToSection("gallery"),
+                },
+                {
+                    label: "Wedding Video",
+                    action: () => this.scrollToSection("pre-wedding-video"),
+                },
+                {
+                    label: "QR Code",
+                    action: this.toggleQRModal,
                 },
             ],
             showQR: false,

@@ -24,6 +24,12 @@
 import ScrollReveal from "scrollreveal";
 
 export default {
+    props: {
+        offAnimation: {
+            type: Boolean,
+            default: false,
+        },
+    },
     data() {
         return {
             backgroundImage: "/images/bg/qr-bg.jpg",
@@ -32,26 +38,28 @@ export default {
         };
     },
     mounted() {
-        const sr = ScrollReveal({
-            origin: "top",
-            distance: "80px",
-            duration: 2000,
-            reset: true,
-        });
+        if (!this.offAnimation) {
+            const sr = ScrollReveal({
+                origin: "top",
+                distance: "80px",
+                duration: 2000,
+                reset: true,
+            });
 
-        sr.reveal(this.$refs.image, {
-            origin: "top",
-            distance: "80px",
-            duration: 3000,
-            reset: true,
-        });
+            sr.reveal(this.$refs.image, {
+                origin: "top",
+                distance: "80px",
+                duration: 3000,
+                reset: true,
+            });
 
-        sr.reveal(this.$refs.qrImage, {
-            origin: "top",
-            distance: "80px",
-            duration: 7000,
-            reset: true,
-        });
+            sr.reveal(this.$refs.qrImage, {
+                origin: "top",
+                distance: "80px",
+                duration: 7000,
+                reset: true,
+            });
+        }
     },
 };
 </script>
