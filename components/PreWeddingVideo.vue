@@ -15,7 +15,7 @@
             />
             <!-- Play Button -->
             <button
-                class="rounded-full animate-bounce flex justify-center w-full text-center items-center absolute left-0 right-0 top-[45%]"
+                class="rounded-full flex justify-center w-full text-center items-center absolute left-0 right-0 top-[40%]"
                 @click="openModal"
             >
                 <img src="/images/play-button.png" alt="Play Button" class="w-[95px] h-auto" />
