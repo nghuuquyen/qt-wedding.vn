@@ -100,14 +100,14 @@ export default {
         // Reveal for mobile view
         ScrollReveal().reveal(".quote-container", {
             ...revealOptions,
-            duration: 3500,
+            duration: 2500,
             origin: "top",
         });
 
         // Reveal for desktop image box
         ScrollReveal().reveal(".quote-box", {
             ...revealOptions,
-            duration: 7000,
+            duration: 3000,
             origin: "bottom",
         });
     },

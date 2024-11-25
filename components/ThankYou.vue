@@ -43,20 +43,19 @@ export default {
         const sr = ScrollReveal({
             origin: "top",
             distance: "80px",
-            duration: 2000,
             reset: false,
         });
 
         sr.reveal(this.$refs.image, {
             origin: "top",
             distance: "80px",
-            duration: 3000,
+            duration: 2000,
         });
 
         sr.reveal(this.$refs.messageBox, {
             origin: "top",
             distance: "80px",
-            duration: 7000,
+            duration: 3000,
         });
     },
 };

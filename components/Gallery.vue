@@ -105,7 +105,7 @@ export default {
     mounted() {
         ScrollReveal().reveal(this.$refs.gallery, {
             delay: 500,
-            duration: 3000,
+            duration: 2500,
             origin: "top",
             distance: "50px",
             opacity: 0,

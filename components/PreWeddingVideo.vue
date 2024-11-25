@@ -89,7 +89,7 @@ export default {
         sr.reveal(this.$refs.videoThumbnail, {
             origin: "top",
             distance: "80px",
-            duration: 3000,
+            duration: 2500,
         });
     },
     computed: {

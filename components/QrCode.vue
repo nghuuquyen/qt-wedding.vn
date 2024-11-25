@@ -42,7 +42,6 @@ export default {
             const sr = ScrollReveal({
                 origin: "top",
                 distance: "80px",
-                duration: 2000,
                 reset: false,
             });
 
@@ -55,7 +54,7 @@ export default {
             sr.reveal(this.$refs.qrImage, {
                 origin: "top",
                 distance: "80px",
-                duration: 3000,
+                duration: 2000,
             });
         }
     },
