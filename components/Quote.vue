@@ -1,6 +1,6 @@
 <template>
     <div
-        class="quote-container relative w-full h-screen"
+        class="quote-container relative w-full h-screen overflow-hidden"
     >
         <!-- Mobile View -->
         <div
@@ -40,19 +40,19 @@
                 <img
                     :src="imageUrl"
                     alt="Story Image"
-                    class="object-contain w-full max-h-[650px] h-auto rounded-lg shadow-2xl"
+                    class="object-contain max-h-[80vh] w-auto rounded-lg shadow-sm"
                 />
             </div>
             <!-- Quote Box -->
             <div
-                class="quote-box max-w-[500px] relative z-2 flex flex-col items-center justify-center bg-gradient-to-br from-fuchsia-500 to-rose-500 text-white px-10 py-8 rounded-lg shadow-xl"
+                class="quote-box max-w-[500px] relative z-2 flex flex-col items-center justify-center bg-gradient-to-br from-fuchsia-400 to-rose-500 text-white px-10 py-8 rounded-lg shadow-xl"
             >
                 <div class="text-center">
                     <p class="text-2xl font-serif italic leading-relaxed">
                         {{ text }}
                     </p>
                     <div class="mt-4">
-                        <div class="w-[100px] h-px bg-[#CEC4BA] my-2 m-auto"></div>
+                        <div class="w-[85px] h-px bg-[white] my-2 m-auto"></div>
                         <span class="block text-sm uppercase tracking-widest font-semibold opacity-90">
                             {{ subText }}
                         </span>
