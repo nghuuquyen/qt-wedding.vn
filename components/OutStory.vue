@@ -5,6 +5,7 @@
             :key="index"
             :imageUrl="quote.image"
             :text="quote.text"
+            :is-image-first="index % 2 === 0"
             subText="A Moment to Remember"
         />
     </main>

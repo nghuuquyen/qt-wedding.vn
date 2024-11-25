@@ -36,6 +36,7 @@
             <!-- Image Box -->
             <div
                 class="relative z-2 flex justify-center items-center overflow-hidden"
+                :class="isImageFirst ? '' : 'order-last'"
             >
                 <img
                     :src="imageUrl"
@@ -45,7 +46,7 @@
             </div>
             <!-- Quote Box -->
             <div
-                class="quote-box max-w-[500px] relative z-2 flex flex-col items-center justify-center bg-gradient-to-br from-fuchsia-400 to-rose-500 text-white px-10 py-8 rounded-lg shadow-xl"
+                class="quote-box max-w-[500px] relative z-2 flex flex-col items-center justify-center bg-gradient-to-br from-fuchsia-400 to-rose-500 text-white px-10 py-8 rounded-lg shadow-xl m-auto"
             >
                 <div class="text-center">
                     <p class="text-2xl font-serif italic leading-relaxed">
@@ -81,6 +82,10 @@ export default {
         subText: {
             type: String,
             default: "",
+        },
+        isImageFirst: {
+            type: Boolean,
+            default: true, // Set too false to show Quote Box first
         },
     },
     mounted() {
