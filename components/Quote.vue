@@ -107,7 +107,7 @@ export default {
         // Reveal for desktop image box
         ScrollReveal().reveal(".quote-box", {
             ...revealOptions,
-            duration: 3000,
+            duration: 6500,
             origin: "bottom",
         });
     },
