@@ -1,11 +1,11 @@
 <template>
-    <section class="bg-center bg-cover h-screen">
+    <section class="bg-center bg-cover min-h-screen relative">
         <div class="w-full h-full flex items-center justify-center overflow-hidden">
             <div class="inset-0 text-center flex flex-col items-center">
                 <img
                     :src="chibiImage"
                     alt="QR Background"
-                    class="object-cover w-[250px] mb-3 flex-shrink-0"
+                    class="object-cover w-[40vh] max-w-[250px] mb-3 flex-shrink-0"
                     ref="image"
                 />
 
@@ -43,21 +43,19 @@ export default {
                 origin: "top",
                 distance: "80px",
                 duration: 2000,
-                reset: true,
+                reset: false,
             });
 
             sr.reveal(this.$refs.image, {
                 origin: "top",
                 distance: "80px",
                 duration: 3000,
-                reset: true,
             });
 
             sr.reveal(this.$refs.qrImage, {
                 origin: "top",
                 distance: "80px",
                 duration: 3000,
-                reset: true,
             });
         }
     },

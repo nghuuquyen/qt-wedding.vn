@@ -5,7 +5,7 @@
                 <img
                     :src="chibiImage"
                     alt="Thank You Background"
-                    class="object-cover w-[250px] mb-3"
+                    class="object-cover w-[40vh] max-w-[250px] mb-3"
                     ref="image"
                 />
 
@@ -44,21 +44,19 @@ export default {
             origin: "top",
             distance: "80px",
             duration: 2000,
-            reset: true,
+            reset: false,
         });
 
         sr.reveal(this.$refs.image, {
             origin: "top",
             distance: "80px",
             duration: 3000,
-            reset: true,
         });
 
         sr.reveal(this.$refs.messageBox, {
             origin: "top",
             distance: "80px",
             duration: 7000,
-            reset: true,
         });
     },
 };

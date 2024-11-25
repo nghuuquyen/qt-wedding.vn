@@ -10,7 +10,7 @@
             <img
                 :src="thumbnail"
                 alt="Pre-Wedding Video Thumbnail"
-                class="h-auto rounded-lg shadow-lg w-[300px]"
+                class="rounded-lg shadow-lg max-w-[40vh] h-auto"
                 @click="openModal"
             />
             <!-- Play Button -->
@@ -19,7 +19,7 @@
                 class="rounded-full flex justify-center w-full text-center items-center absolute left-0 right-0 top-[40%]"
                 @click="openModal"
             >
-                <img src="/images/play-button.png" alt="Play Button" class="w-[95px] h-auto" />
+                <img src="/images/play-button.png" alt="Play Button" class="max-w-[10vh] h-auto" />
             </button>
         </div>
 
@@ -83,14 +83,13 @@ export default {
             origin: "top",
             distance: "80px",
             duration: 2000,
-            reset: true,
+            reset: false,
         });
 
         sr.reveal(this.$refs.videoThumbnail, {
             origin: "top",
             distance: "80px",
             duration: 3000,
-            reset: true,
         });
     },
     computed: {

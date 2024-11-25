@@ -14,7 +14,7 @@
                     <img
                         :src="item.url"
                         :alt="item.name"
-                        class="h-[500px] w-auto rounded-lg shadow-md"
+                        class="h-[50vh] w-auto rounded-lg shadow-md"
                         loading="lazy"
                     />
                 </div>
