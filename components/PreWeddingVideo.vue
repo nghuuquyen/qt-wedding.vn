@@ -10,7 +10,7 @@
             <img
                 :src="thumbnail"
                 alt="Pre-Wedding Video Thumbnail"
-                class="h-auto rounded-lg shadow-lg w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800px]"
+                class="h-auto rounded-lg shadow-lg w-[300px]"
                 @click="openModal"
             />
             <!-- Play Button -->

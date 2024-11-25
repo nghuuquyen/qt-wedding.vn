@@ -56,7 +56,7 @@ export default {
             sr.reveal(this.$refs.qrImage, {
                 origin: "top",
                 distance: "80px",
-                duration: 7000,
+                duration: 3000,
                 reset: true,
             });
         }

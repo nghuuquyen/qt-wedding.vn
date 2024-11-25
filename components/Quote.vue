@@ -52,6 +52,7 @@
                         {{ text }}
                     </p>
                     <div class="mt-4">
+                        <div class="w-[100px] h-px bg-[#CEC4BA] my-2 m-auto"></div>
                         <span class="block text-sm uppercase tracking-widest font-semibold opacity-90">
                             {{ subText }}
                         </span>

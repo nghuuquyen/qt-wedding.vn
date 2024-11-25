@@ -1,7 +1,7 @@
 <template>
     <div class="page">
         <!-- Section: Banner -->
-        <section id="banner" class="section text-white relative bg-cover bg-center lg:bg-top" :style="{ backgroundImage: `url(/images/banner.jpg)` }">
+        <section id="banner" class="section text-white relative bg-cover lg:bg-top bg-center" :style="{ backgroundImage: `url(/images/banner.jpg)` }">
             <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center bottom-[-15%]">
                 <div ref="logo" class="flex flex-col items-center content-center">
                     <img src="/images/logo.png" alt="Logo" class="mb-4 max-w-[200px] lg:max-w-[350px]" />
