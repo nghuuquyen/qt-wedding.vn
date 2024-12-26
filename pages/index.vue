@@ -38,8 +38,6 @@
         <PreWeddingVideo id="pre-wedding-video" thumbnail="/images/video-thumbnail.jpg" video-id="_4hbXkkfkrM"/>
 
         <ThankYou id="thank-you" />
-
-        <QrCode id="qr-code" />
     </div>
 </template>
 

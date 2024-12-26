@@ -1,21 +1,4 @@
 <template>
-    <!-- Floating QR Button -->
-    <div class="fixed bottom-[75px] right-[15px] flex flex-col items-center space-y-2 w-12 h-12">
-        <button
-            aria-label="QR Code"
-            @click="toggleQRModal"
-            style="z-index: 1;"
-            class="z-1 bg-blue-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
-        >
-            <span class="text-lg font-bold">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z" />
-                </svg>
-            </span>
-        </button>
-    </div>
-
     <!-- Floating Expandable Button -->
     <div class="fixed bottom-[20px] right-[15px] flex flex-col items-center space-y-2">
         <!-- Menu Items (Hidden by Default) -->
@@ -72,36 +55,12 @@
             </span>
         </span>
     </div>
-
-    <!-- QR Modal -->
-    <div
-        v-if="showQR"
-        class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-end"
-    >
-        <div class="bg-white rounded-t-lg p-6 w-full max-w-md bg-cover bg-center" style="background-image: url(/images/bg/qr-bg.jpg);">
-            <h2 class="text-lg font-bold mb-4 text-center">Bank QR Codes</h2>
-            <div class="flex justify-between">
-                <QrCode v-if="showQR" :off-animation="true" />
-            </div>
-            <button
-                aria-label="Close QR Modal"
-                @click="toggleQRModal"
-                class="mt-4 w-full bg-gray-700 text-white py-2 rounded-lg"
-            >
-                Close
-            </button>
-        </div>
-    </div>
 </template>
 
 <script>
 import { useMusic } from "~/composables/useMusic";
-import QrCode from "@/components/QrCode.vue";
 
 export default {
-    components: {
-        QrCode,
-    },
     setup() {
         const { musicState, toggleMusic } = useMusic();
 
@@ -126,18 +85,10 @@ export default {
                     label: "Wedding Video",
                     action: () => this.scrollToSection("pre-wedding-video"),
                 },
-                {
-                    label: "QR Code",
-                    action: this.toggleQRModal,
-                },
             ],
-            showQR: false,
         };
     },
     methods: {
-        toggleQRModal() {
-            this.showQR = !this.showQR;
-        },
         scrollToSection(section) {
             document.getElementById(section).scrollIntoView({ behavior: "smooth" });
         },
